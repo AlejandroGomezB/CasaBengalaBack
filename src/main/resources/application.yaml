@@ -2,10 +2,9 @@ spring:
   application:
     name: GameFestivalDemo
   datasource:
-    url: ${DATABASE_URL}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:postgresql://ep-dark-smoke-ansml829.c-6.us-east-1.aws.neon.tech:5432/gamefestival
+    username: neondb_owner
+    password: npg_Juc0w5zOqKeU
   jpa:
     hibernate:
       ddl-auto: update
@@ -13,7 +12,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.MySQLDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 server:
   servlet:
     context-path: /gamefestival/demo/api
